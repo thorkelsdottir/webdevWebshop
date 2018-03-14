@@ -1,0 +1,730 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:300,400,500,600');
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  #pageLoggedOut, #pageLoggedIn, #pageSignUp, #pageLoggedOutSubmit, #pageEditUser, #pageLoggedOutStore {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    color: white;
+    font-size: 50px;
+  }
+  #pageLoggedOutStore {
+    background: white;
+    width: 100vw;
+    z-index: 2;
+  }
+  #pageLoggedOut {
+    background-image: url("../images/login_gifbackground.gif");
+    width: 100vw;
+    z-index: 3;
+  }
+  #pageLoggedOutSubmit {
+    background-image: url("../images/login_gifbackground.gif");
+    width: 100vw;
+    z-index: 5;
+  }
+  #pageLogError {
+    color: #ff1744;
+    font-size: 12px;
+    z-index: 4;
+    width: 300px;
+    top: 336px;
+    padding-left: 43px;
+    position: relative;
+    margin: 0 auto;
+  }
+  #pageLoggedIn{
+    background: white;
+    width: 100vw;
+    z-index: 1;
+  }
+  #divShowAllUsers {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+  }
+  #divShowAllProducts {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+  }
+  #pageMyProfile {
+    width: calc(100% - 300px);
+    margin-left: 300px;
+  }
+  #pageLogError  {
+    display: none;
+  }
+  #pageEditUser {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+  }
+  .page {
+    display: none;
+  }
+  .landingPage {
+    display: none;
+  }
+  .showPage {
+    display: flex;
+  }
+  #editProduct {
+    display: none;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+  }
+  .pageLogIn {
+    background: black;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    border-radius: 50%;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-style-6 {
+    width: 60%;
+    margin: auto;
+    margin-top: 60px;
+  }
+  .pageLogIn .frmSumbit {
+    margin-top: 16px;
+  }
+  .form-style-6 input {
+      -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+      outline: none;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      width: 100%;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 3%;
+      color: #555;
+  }
+  .form-style-6 input[type=file] {
+      background: black;
+      border: none;
+      color: white;
+      outline: none;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      padding: 3%;
+  }
+  .form-style-6 input:focus{
+      box-shadow: 0 0 5px #43D1AF;
+      padding: 3%;
+      border: 1px solid #43D1AF;
+  }
+  .form-style-6 input[type=file]:focus {
+      box-shadow: none;
+      padding: 3%;
+      border: none;
+  }
+  .form-style-6 button.btnSubmit, button.btnLogin, button.btnSaveProduct, button.btnSubscribeEmail {
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      width: 100%;
+      padding: 3%;
+      background: #43D1AF;
+      border-radius: 2px;
+      border-bottom: 2px solid #30C29E;
+      border-top-style: none;
+      border-right-style: none;
+      border-left-style: none;
+      color: #fff;
+      margin-bottom: 4%;
+      outline: none;
+  }
+  button.btnSubscribeEmail {
+    width: 120px;
+    margin-top: -5px;
+    margin-left: 20px;
+  }
+
+  .form-style-6 button.btnSubmit:hover, button.btnLogin:hover, button.btnSaveProduct:hover, button.btnSubscribeEmail:hover {
+      background: #2EBC99;
+  }
+  .shopCart button.btnClearCart, .shopCart button.btnBuyInCart {
+    padding: 13px;
+    background: #43D1AF;
+    border-radius: 2px;
+    border-bottom: 2px solid #30C29E;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    color: #fff;
+    margin-bottom: 4%;
+    outline: none;
+    margin: 30px;
+    width: 120px;
+  }
+  .shopCart .btnClearCart:hover,   .shopCart .btnBuyInCart:hover {
+      background: #2EBC99;
+  }
+.shopLocation p {
+  color: black;
+  font-size: 22px;
+  font-family: 'Oswald', sans-serif;
+  transform: rotate(90deg) translateY(0.5em);
+  font-weight: 300;
+  position: absolute;
+  right: -25px;
+  bottom: 230px;
+  }
+
+  button.shopLocation {
+    box-shadow:
+      0 0 0 1em #ff1744,
+      0 1em 0 1em #ff1744,
+      -2.5em 1.5em 0 .5em #ff1744,
+      2.5em 1.5em 0 .5em #ff1744,
+      -3em -3em 0 0 #ff1744,
+      3em -3em 0 0 #ff1744,
+      -2em -2em 0 0 #ff1744,
+      2em -2em 0 0 #ff1744,
+      -3em -1em 0 0 #ff1744,
+      -2em -1em 0 0 #ff1744,
+      2em -1em 0 0 #ff1744,
+      3em -1em 0 0 #ff1744,
+      -4em 0 0 0 #ff1744,
+      -3em 0 0 0 #ff1744,
+      3em 0 0 0 #ff1744,
+      4em 0 0 0 #ff1744,
+      -5em 1em 0 0 #ff1744,
+      -4em 1em 0 0 #ff1744,
+      4em 1em 0 0 #ff1744,
+      5em 1em 0 0 #ff1744,
+      -5em 2em 0 0 #ff1744,
+      5em 2em 0 0 #ff1744,
+      -5em 3em 0 0 #ff1744,
+      -3em 3em 0 0 #ff1744,
+      3em 3em 0 0 #ff1744,
+      5em 3em 0 0 #ff1744,
+      -2em 4em 0 0 #ff1744,
+      -1em 4em 0 0 #ff1744,
+      1em 4em 0 0 #ff1744,
+      2em 4em 0 0 #ff1744;
+      background: #ff1744;
+      width: 1em;
+      height: 1em;
+      position: absolute;
+      right: 80px;
+      bottom: 80px;
+      outline: none;
+      border: none;
+      color: white;
+    }
+
+  .form-style-6 button.btnSignUp {
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+      outline: none;
+      width: 100%;
+      border-radius: 2px;
+      padding: 3%;
+      background: #ff1744;
+      border-bottom: 2px solid #ff1744;
+      border-top-style: none;
+      border-right-style: none;
+      border-left-style: none;
+      color: #fff;
+      margin-bottom: 4%;
+      outline: none;
+  }
+  .form-style-6 button.btnSignUp:hover {
+      background: #cc1236;
+      border-bottom: 2px solid #cc1236;
+  }
+  button.btnAddProduct {
+      box-sizing: border-box;
+      -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+      outline: none;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      padding: 10px;
+      border-radius: 2px;
+      width: 100px;
+      background: black;
+      border: 1px solid black;
+      font-weight: 400;
+      color: #fff;
+      margin-bottom: 4%;
+      outline: none;
+      left: 100px;
+      position: absolute;
+  }
+  button.btnAddProduct:hover {
+      background: white;
+      border: 1px solid black;
+      color: black;
+  }
+  button.btnDeleteUser, button.btnDeleteProduct, button.btnDeleteUserMyProfile {
+      box-sizing: border-box;
+      -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+      outline: none;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      font-weight: 400;
+      padding: 10px;
+      border-radius: 2px;
+      width: 80px;
+      border: 1px solid #ff1744;
+      background: white;
+      color: #ff1744;
+      outline: none;
+  }
+  button.btnDeleteUser:hover, button.btnDeleteProduct:hover, button.btnDeleteUserMyProfile:hover {
+      background: #ff1744;
+      border: 1px solid #ff1744;
+      color: white;
+  }
+  button.btnEditUser, button.btnEditProduct, button.btnEditUserMyProfile {
+      box-sizing: border-box;
+      -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+      outline: none;
+      -webkit-box-sizing: border-box;
+      font-weight: 400;
+      width: 80px;
+      -moz-box-sizing: border-box;
+      padding: 10px;
+      border-radius: 2px;
+      background: white;
+      border: 1px solid #353535;
+      color: #353535;
+      outline: none;
+      margin-right: 10px;
+  }
+  button.btnEditUser:hover, button.btnEditProduct:hover, button.btnEditUserMyProfile:hover {
+      background: #656565;
+      border: 1px solid #656565;
+      color: white;
+  }
+  .form-style-6 button.btnCloseSignUp, button.btnCloseAddProduct {
+    box-sizing: border-box;
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    border-radius: 50%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    padding: 3%;
+    width: 10%;
+    background: #ff1744;
+    border-bottom: 2px solid #ff1744;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    color: #fff;
+    overflow: hidden;
+    margin-left: 45%;
+    margin-top: -17%;
+    outline: none;
+  }
+  .form-style-6 button.btnCloseSignUp:hover, button.btnCloseAddProduct:hover {
+    background: #cc1236;
+    border-bottom: 2px solid #cc1236;
+  }
+
+  .form-style-6 input[type="file"] {
+    width: 50%;
+  }
+  .form-style-6 h4 {
+      text-align: center;
+      margin-bottom: 3%;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 300;
+  }
+  .divAddProducts, .divEditProducts {
+    margin: auto;
+    margin-top: 12%;
+  }
+  .productCard {
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.09);
+    border-radius: 2px;
+    height: 500px;
+    width: 350px;
+    color: black;
+  }
+  .productCard p {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    padding: 2px;
+  }
+  .productCard h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+  }
+  .showMyCart {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 0 auto;
+  }
+  .productInCart {
+    flex-wrap: wrap;
+    background: white;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.09);
+    border-radius: 2px;
+    height: 300px;
+    width: 200px;
+  }
+  .productInCart h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    color: black;
+  }
+  .productInCart p {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    padding: 2px;
+    color: black;
+  }
+  .col {
+  background: white;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.09);
+  border-radius: 2px;
+  height: 370px;
+  width: 230px;
+  color: black;
+  }
+  .col p {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 14px;
+    padding: 2px;
+  }
+  .col h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+  }
+  .flex-grid-thirds {
+  justify-content: center;
+  flex-wrap: wrap;
+  height: -webkit-fill-available;
+  }
+  .shopContent {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    margin-top: 20%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .shopCart {
+    display: none;
+    width: 70%;
+    margin: 0 auto;
+    position: absolute;
+    top: 170px;
+  }
+  .btnCartButtons {
+    display: none;
+    width: 400px;
+    height: 400px;
+    margin: 0 auto;
+  }
+  img.imgBuyIcon {
+    style="width: 40px;"
+    color: black;
+  }
+  .profileImage {
+    margin-top: -300px;
+    margin-left: 200px;
+  }
+  .profileImage img {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.09);
+    border-radius: 50%;
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+  }
+  .profileImage h3 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    margin-bottom: 40px;
+    font-size: 40px;
+    color: black;
+  }
+  .myProfileImage {
+    width: 70%;
+    height: 430px;
+    display: flex;
+    margin: auto;
+  }
+  .myProfileImage img {
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.09);
+    border-radius: 2%;
+    width: 300px;
+    height: 300px;
+    margin-top: 60px;
+  }
+  .myProfileImage h2 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    margin-bottom: 10px;
+    font-size: 40px;
+    color: black;
+  }
+  .myProfileImage p {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    margin-bottom: 10px;
+    font-size: 24px;
+    color: black;
+  }
+  .myProfileInfo {
+    width: 500px;
+    margin: 60px;
+  }
+  #pageLoggedIn ul {
+    width: 300px;
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    background: #43D1AF;
+  }
+  #pageLoggedIn ul li {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+    width: 300px;
+    color: black;
+    list-style: none;
+    text-align: center;
+    height: 90px;
+    padding: 32px 10px 10px 10px;
+    -webkit-transition: all 0.10s ease-in-out;
+    -moz-transition: all 0.10s ease-in-out;
+    -ms-transition: all 0.10s ease-in-out;
+    -o-transition: all 0.10s ease-in-out;
+  }
+  .addProducts {
+    display: none;
+    background: black;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.09);
+    border-radius: 50%;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+  }
+  .editProduct {
+    background: black;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.08), 0 3px 6px rgba(0,0,0,0.09);
+    border-radius: 50%;
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+  }
+  #pageLoggedIn ul li:hover {
+    background: #2EBC99;
+  }
+  #pageLoggedOutStore header {
+    display: flex;
+    flex-grow: 1;
+    margin-left: 100px;
+    font-size: 40px;
+    position: absolute;
+    top: 10px;
+  }
+  #pageLoggedOutStore header h1 {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    color: black;
+    flex-grow: 1;
+    margin-left: -40px;
+  }
+  .mapModal {
+    background: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+  }
+  .mapModal h1 {
+    flex-grow: 1;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+  button.btnCloseMapModal {
+    color: white;
+    background: none;
+    width: 30px;
+    height: 30px;
+    font-size: 22px;
+    outline: none;
+    border: none;
+    margin: 15px 15px;
+  }
+  .mapInfo {
+    display: flex;
+  }
+  .btnToLogin {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    width: 80px;
+    height: 80px;
+    background: #43D1AF;
+    border-radius: 50px;
+    border-bottom: 2px solid #30C29E;
+    border-top-style: none;
+    border-right-style: none;
+    border-left-style: none;
+    color: #fff;
+    outline: none;
+    margin-top: 24px;
+    margin-right: 140px;
+    margin-left: 30px;
+  }
+  .btnToLogin:hover {
+      background: #2EBC99;
+  }
+  .productCardInfo {
+    flex-grow: 1;
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+  .productCardInfoIcon {
+    display: flex;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    margin-top: -120px;
+    height: 70px;
+    width: 320px;
+  }
+  .productCardIcon {
+    margin-right: 24px;
+    margin-top: 5px;
+  }
+  .btnBuyProduct {
+    background: white;
+    border: none;
+    outline: none;
+    width: 100%;
+  }
+  .btnBuyProductIcon {
+    width: 40px;
+    background: url(../images/icon.svg) no-repeat;
+    height: 30px;
+    -webkit-transition: all 0.10s ease-in-out;
+    -moz-transition: all 0.10s ease-in-out;
+    -ms-transition: all 0.10s ease-in-out;
+    -o-transition: all 0.10s ease-in-out;
+  }
+  .btnBuyProductIcon:hover {
+    width: 40px;
+    background: url(../images/icon_red.svg) no-repeat;
+    height: 30px;
+  }
+  .shopSubscribe {
+    display: flex;
+    position: absolute;
+    transform: rotate(-90deg) translateY(0.5em);
+    margin-left: -45%;
+  }
+  .shopSubscribe p {
+    color: black;
+    font-size: 22px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+  }
+  .frmUserEmail {
+    margin-top: -23px;
+  }
+  .frmUserEmail input {
+      -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+      outline: none;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      width: 100%;
+      margin-left: 10px;
+      background: #fff;
+      border: 1px solid #ccc;
+      padding: 9%;
+      color: #555;
+  }
+    .frmUserEmail input:focus{
+      box-shadow: 0 0 5px #43D1AF;
+      border: 1px solid #43D1AF;
+  }
+  #map {
+      height: 80%;
+      width: 80%;
+      margin: 0 auto;
+       }
+   #mapModal {
+     display: none;
+   }
+  .pageCart {
+    display: none;
+  }
+  .btnCart {
+    border: none;
+    background: none;
+    color: white;
+    margin-top: 20px;
+    margin-left: 30px;
+    outline: none;
+  }
+  .btnToCart{
+    width: 60px;
+  }
+  .clearBuyButtons {
+    width: 40%;
+    margin: 0 auto;
+  }

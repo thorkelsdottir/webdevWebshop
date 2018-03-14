@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Help me!</title>
+  </head>
+  <body>
+
+  </body>
+
+  <script>
+
+  <!-- /* * * * * * * * * * * * * * * * * * * * AJAX * * * * * * * * * * * * * * * * * * * */ -->
+
+      // var ajax = new XMLHttpRequest();
+      // ajax.onreadystatechange = function() {
+      //   if (this.readyState == 4 && this.status == 200) {
+      //     var sDataFromServer = this.responseText;
+      //     var jDataFromServer = JSON.parse(sDataFromServer);
+      //   }
+      // }
+      // ajax.open("GET", "api/...", true);
+      // ajax.send();
+
+
+<!-- /* * * * * * * * * * * * * * * * * * * * JS stuff * * * * * * * * * * * * * * * * * * * */ -->
+
+      // document.addEventListener("click", function(e) {
+      //     });
+
+      //var varibleName = document.querySelector("#idName");
+
+      // btnName.addEventListener("click", function(){
+      //
+      // });
+
+<!-- /* * * * * * * * * * * * * * * * * * * * INSERT WITH innerHTML * * * * * * * * * * * * * * * * * * * */ -->
+
+      // var divShowAllUsers = document.getElementById('divShowAllUsers');
+      // var sDivShowUserInfo = "";
+      // for (var i = 0; i < jDataFromServer.length; i++) {
+      //
+      //     sUserId = jDataFromServer[i].id;
+      //     sUserFirstName = jDataFromServer[i].firstname;
+      //     sUserLastName = jDataFromServer[i].lastname;
+      //     sUserEmail = jDataFromServer[i].email;
+      //     sUserMobile = jDataFromServer[i].mobile;
+      //     sUserUserRole = jDataFromServer[i].userrole;
+      //     sUserImage = jDataFromServer[i].image;
+      //
+      //     sDivShowUserInfo += '<div class="col"><img style="height: 150px; border-radius: 2px; margin-bottom: 15px;" src="'+sUserImage+'" alt=""><h3>'+sUserFirstName+' '+sUserLastName+'</h3><p>'+sUserEmail+'</p><p>'+sUserMobile+'</p><button class="btnShowPage btnEditUser" data-showThisPage="pageEditUser" type="button" data-id="'+sUserId+'">EDIT</button><button class="btnDeleteUser" type="button" data-id="'+sUserId+'">DELETE</button></div>';
+      // }
+      // divShowAllUsers.innerHTML = sDivShowUserInfo;
+
+<!-- /* * * * * * * * * * * * * * * * * * * * INSERT WITH insertAdjacentHTML * * * * * * * * * * * * * * * * * * * */ -->
+
+
+      // var divShowAllUsers = document.getElementById('divShowAllUsers');
+      // var sDivShowUserInfo = "";
+      // for (var i = 0; i < jDataFromServer.length; i++) {
+      //
+      //     sUserId = jDataFromServer[i].id;
+      //     sUserFirstName = jDataFromServer[i].firstname;
+      //     sUserLastName = jDataFromServer[i].lastname;
+      //     sUserEmail = jDataFromServer[i].email;
+      //     sUserMobile = jDataFromServer[i].mobile;
+      //     sUserUserRole = jDataFromServer[i].userrole;
+      //     sUserImage = jDataFromServer[i].image;
+      //
+      //     sDivShowUserInfo += '<div class="col"><img style="height: 150px; border-radius: 2px; margin-bottom: 15px;" src="'+sUserImage+'" alt=""><h3>'+sUserFirstName+' '+sUserLastName+'</h3><p>'+sUserEmail+'</p><p>'+sUserMobile+'</p><button class="btnShowPage btnEditUser" data-showThisPage="pageEditUser" type="button" data-id="'+sUserId+'">EDIT</button><button class="btnDeleteUser" type="button" data-id="'+sUserId+'">DELETE</button></div>';
+      // }
+      // divShowAllUsers.insertAdjacentHTML('afterend', sDivShowUserInfo );
+
+
+<!-- /* * * * * * * * * * * * * * * * * * * * PROXY * * * * * * * * * * * * * * * * * * * */ -->
+
+      // <?php
+      // // Good for CROSS DOMAIN
+      // $sWebsite = file_get_contents( "http://kea.dk" );
+      // $sWebsite = str_replace( "Om KEA" , "TEST", $sWebsite );
+      // echo $sWebsite;
+      // ?>
+
+
+<!-- /* * * * * * * * * * * * * * * * * * * * Print out name every 2s * * * * * * * * * * * * * * * * * * * */ -->
+
+
+      // setInterval(function() {
+      //     console.log("Birna");
+      //   }, 2000);
+
+
+<!-- /* * * * * * * * * * * * * * * * * * * * FUNCTIONS with arguments  * * * * * * * * * * * * * * * * * * * */ -->
+
+      // function addTwoNumbers(iNumber, iNumber2) {
+      // var sum = iNumber + iNumber2;
+      // return sum;
+      // }
+      // var resault = addTwoNumbers(2, 2);
+      // console.log(resault);
+      // //resault would be 4
+
+
+      // function my5Arguments(sName, sLastName, sSchool, iAge, sMessage){
+      //   console.log("My name is ", sName, sLastName, "I'm in ", sSchool, ", I'm ",iAge, "years old and this is my message: ", sMessage);
+      // }
+      // my5Arguments("Birna", "Thorkelsdottir", "KEA", 34, "This is great");
+
+
+<!-- /* * * * * * * * * * * * * * * *  Delete the element with the id 2 from the array  * * * * * * * * * * * * * * * */ -->
+
+
+      // var aUsers = [{"id":1, "name": "B"}, {"id":2, "name": "A"}];
+      // //console.log("first", aUsers);
+      // for (var i = 0; i < aUsers.length; i++) {
+      //   //console.log("first", aUsers[i]);
+      //   if(aUsers[i].id == 2){
+      //     aUsers.splice(i,1);
+      //   }
+      // }
+      // //console.log("second:", aUsers);
+
+
+<!-- /* * * * * * * * * * * * * * * * * * * *  Arrays and json Objects  * * * * * * * * * * * * * * * * * * * * * * * */ -->
+
+
+      // //Create empty array for users
+      // //Answer php:
+      // $aUsers = [];
+      // //Answer js:
+      // var sUsert = [];
+      //
+      // //Create empty object with users
+      // var jUser = {};
+      // //Enter your name
+      // jUser.name = "Birna";
+      // //Add object to the array
+      // aUsers.push(jUser);
+      // //Delete
+      // aUsers.splice(0,1);
+
+      //
+      // PUSH & POP : add / delete variable in the END of an array
+      // SHIFT / UNSHIFT : add / delete variable in the beginning of an array
+      // SPLICE : - delete - takes 2 arguments: (element to delete , how many elements to delete)
+
+
+
+<!-- /* * * * * * * * * * * concatinate +45 before the mobilenumber  * * * * * * * * * * * * * * * * * */ -->
+
+
+      // 	Add variable to api:
+      // 		$sAreaCode = '+45 ';
+      //
+      // 	Add $sAreaCode to data:
+      // $jUserData->mobile= $sAreaCode.$sUserMobile;
+
+
+
+<!-- /* * * * * * * * * * *  * * * * * * *  ADD TO LOCALSTORAGE  * * * * * * * * * * * * * * * * * */ -->
+
+      // var aUsers = ["Birna", "Katrín", "Jón"];
+      // localStorage.aUsers = aUsers;
+
+<!-- /* * * * * * * * * * *  * * * * * * *  COUNTER  * * * * * * * * * * * * * * * * * */ -->
+
+      //
+      // for (var i = 0; i < 20; i++) {
+      //   console.log(i);
+      // }
+
+
+
+<!-- /* * * * * What is the Difference Between Number(), parseInt(), parseFloat() ?  * * * * */ -->
+
+      // var price = "10.950";
+      // var number = Number(price);            //gives me 10.950
+      // var parseInt = parseInt(price);        //gives me 10
+      // var parseFloat = parseFloat(price);     //gives me 10.95
+      // var newPrice = Number(price).toFixed(2);  //gives me 10.95
+
+
+
+<!-- /* * * * *  * * * * *  * * * * ** * * * * JSONintro  * * * * * * * * * * * * * * * * * * * */ -->
+
+      //
+      // ajUsers = [
+      //             {
+      //               "name":"A",
+      //               "phoneNumber":["777","444","333"]
+      //             }
+      //           ];
+      // console.log(ajUsers[0].phoneNumber[1]);
+      //
+      //
+      // //Show Toby
+      // var ajUsers = [
+      //                 {"name":"A" , "phones":[1,2,3]},
+      //                 {"name":"B","siblings":[
+      //                                         {"name":"AA"},
+      //                                         {"name":"BB","pets":[
+      //                                                               {"name":"Tobi"}
+      //                                                             ]}
+      //                                         ]}
+      //               ];
+      // console.log(ajUsers[1].siblings[1].pets[0].name);
+
+
+
+<!-- /* * * * *  * * * * *  * * * * ** * * * * GET name via addressbar  * * * * * * * * * * * * * * * * * * * */ -->
+
+      // $name = $_GET['name'];
+      // $file = file_get_contents('users.txt');
+      // $aFile = json_decode($file);
+      //
+      // for (var $i = 0; $i < count($aFile); $i++) {
+      //   if (  $aFile[$i]->name == $name ) {
+      //     echo $aFile[$i]->name;
+      //   }
+      // }
+
+
+
+  </script>
+</html>
